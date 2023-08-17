@@ -1,0 +1,117 @@
+
+    /* Add your CSS styles here */
+    body {
+        font-family: Verdana;
+        margin: 0;
+        padding: 0;
+    }
+
+    .main {
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .post-details {
+        margin: 0 auto;
+        max-width: 600px;
+    }
+
+    .post-details img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+
+    .post-details h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .post-details p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+
+    .liked-by-section {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .liked-by-section p {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    #show-others {
+        color: #007acc;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    #others-list {
+        margin-top: 10px;
+    }
+
+    #others-list p {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .comments-section {
+        margin-top: 20px;
+    }
+
+    .comments-section h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .comment {
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        background-color: #f9f9f9;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .comment p {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .comment-actions a {
+        color: #007acc;
+        text-decoration: none;
+    }
+
+    .site-footer {
+    text-align: center;
+    padding: 0;
+    background: linear-gradient(to bottom, #4ae257, #007acc);
+    color: white;
+    flex-shrink: 0;
+}
+
+    /* Media queries for responsiveness */
+    @media only screen and (max-width: 600px) {
+        .main {
+            padding: 10px;
+        }
+
+        .post-details {
+            max-width: 100%;
+        }
+
+        .liked-by-section,
+        .comment {
+            padding: 8px;
+            font-size: 14px;
+        }
+    }

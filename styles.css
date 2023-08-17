@@ -1,0 +1,589 @@
+/* Reset some default styles */
+body, ul, li {
+    text-decoration:none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    background-color: #51d358;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Existing styles for your layout */
+.menu {
+    float: left;
+    width: 20%;
+}
+
+.menuitem {
+    text-decoration: none;
+    display: block; /* Change the display to block for vertical layout */
+    padding: 8px;
+    margin-top: 7px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.main {
+    float: left;
+    width: 60%;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.right {
+    background-color: lightblue;
+    float: left;
+    width: 20%;
+    padding: 10px 15px;
+    margin-top: 7px;
+}
+
+
+/* Footer styles */
+.site-footer {
+    text-align: center;
+    padding: 0;
+    background: linear-gradient(to bottom, #4ae257, #007acc);
+    color: white;
+    flex-shrink: 0;
+}
+
+/* Flexbox layout to stick footer to the bottom */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+}
+
+/* Styling for the welcome section */
+.welcome-section {
+    background-color: #f1f1f1;
+    padding: 15px;
+    text-align: center;
+}
+
+.welcome-box {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Styling for answer options */
+.answer-options {
+    margin-top: 20px;
+}
+
+.yes-option, .no-option {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #007acc;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width:800px) {
+    /* For tablets: */
+    .main {
+        width: 80%;
+        padding: 0;
+    }
+    .right {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    /* For mobile phones: */
+    .menu, .main, .right {
+        width: 100%;
+    }
+}
+/* Styles for User Profile Box */
+.user-profile-box {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-profile-box h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.profile-picture {
+    text-align: center;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #51d358;
+}
+
+.profile-details {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.profile-details p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+    .user-profile-box {
+        padding: 15px;
+    }
+
+    .profile-details p {
+        font-size: 16px;
+    }
+}
+/* Additional styles for the Edit Profile button */
+.edit-profile-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.edit-button {
+    text-decoration: none;
+    background-color: #007acc;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 3px;
+}
+
+/* Styling for the User Profile box header */
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+
+/* Create a flex container for the posts */
+.edit-posts-section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.edit-posts-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.post-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.post {
+    width: calc(50% - 15px);
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.odd-post {
+    margin-right: 20px;
+}
+
+.even-post {
+    margin-left: 20px;
+}
+
+.post img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.post p {
+    margin-bottom: 10px;
+}
+
+.post-actions {
+    margin-top: 10px;
+}
+
+.edit-button,
+.delete-button {
+    padding: 8px 12px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+/* Styles for the individual post container */
+.post {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Make each post cover the full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.post p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.post strong {
+    font-weight: bold;
+}
+
+.post .actions-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 1px solid #f1f1f1;
+    padding-top: 15px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.like-form,
+.comment-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.like-form button,
+.comment-form button {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.like-form button:hover,
+.comment-form button:hover {
+    background-color: #005ea6;
+}
+
+.like-count,
+.comment-count {
+    font-size: 16px;
+    color: #666;
+}
+
+.like-count::before,
+.comment-count::before {
+    content: '\2022';
+    margin-right: 5px;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #f1f1f1;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+.comment-form button {
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+    .post {
+        padding: 15px;
+    }
+
+    .post img {
+        margin-bottom: 10px;
+    }
+
+    .post p {
+        font-size: 16px;
+    }
+
+    .like-count,
+    .comment-count {
+        font-size: 14px;
+    }
+
+    .like-form button,
+    .comment-form button {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+}
+
+
+/* Styling for the post upload box */
+.post-upload-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.post-upload-box h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.post-upload-box .error {
+    color: #e74c3c;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.post-upload-form label {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.post-upload-form input[type="text"],
+.post-upload-form input[type="file"],
+.post-upload-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.post-upload-form button {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.post-upload-form button:hover {
+    background-color: #005ea6;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .post-upload-form label {
+        font-size: 16px;
+    }
+    
+    .post-upload-form input[type="text"],
+    .post-upload-form input[type="file"],
+    .post-upload-form textarea {
+        font-size: 14px;
+    }
+    
+    .post-upload-form button {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .post-upload-box {
+        padding: 15px;
+    }
+    
+    .post-upload-box h2 {
+        font-size: 20px;
+    }
+    
+    .post-upload-box .error {
+        font-size: 14px;
+    }
+    
+    .post-upload-form label {
+        font-size: 16px;
+    }
+    
+    .post-upload-form input[type="text"],
+    .post-upload-form input[type="file"],
+    .post-upload-form textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+    
+    .post-upload-form button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+/* Styling for the edit profile box */
+.edit-profile-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.edit-profile-box h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+
+.edit-profile-form label {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.edit-profile-form input[type="text"],
+.edit-profile-form input[type="email"],
+.edit-profile-form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.edit-profile-form button {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.edit-profile-form button:hover {
+    background-color: #005ea6;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .edit-profile-form label {
+        font-size: 16px;
+    }
+    
+    .edit-profile-form input[type="text"],
+    .edit-profile-form input[type="email"],
+    .edit-profile-form input[type="file"] {
+        font-size: 14px;
+    }
+    
+    .edit-profile-form button {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .edit-profile-box {
+        padding: 15px;
+    }
+    
+    .edit-profile-box h2 {
+        font-size: 20px;
+    }
+    
+    .edit-profile-form label {
+        font-size: 16px;
+    }
+    
+    .edit-profile-form input[type="text"],
+    .edit-profile-form input[type="email"],
+    .edit-profile-form input[type="file"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+    
+    .edit-profile-form button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+    
+    .edit-profile-form button,
+    .edit-profile-form input[type="text"],
+    .edit-profile-form input[type="email"],
+    .edit-profile-form input[type="file"] {
+        margin-bottom: 10px;
+    }
+}

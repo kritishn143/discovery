@@ -1,0 +1,52 @@
+/* Styling for the main container */
+.main {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Styling for each individual post */
+.post {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for post images */
+.post img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Styling for food name */
+.post p strong:nth-child(1) {
+    color: #FF5733;
+}
+
+/* Styling for description */
+.post p strong:nth-child(2) {
+    color: #333;
+}
+
+/* Styling for posted by */
+.post p strong:nth-child(3) {
+    color: #777;
+}
+
+/* Styling for search message */
+.main p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #777;
+}
+
+/* Clearfix for handling floats */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
